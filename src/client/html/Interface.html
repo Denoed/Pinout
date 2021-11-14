@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang = 'en' dir = 'ltr' >
+    <head>
+        <meta charset = 'utf-8' >
+        <title>Pinout</title>
+        <link rel = 'stylesheet' href = '/css/Style.css'>
+        <script src = '/js/Boards.js'></script>
+        <script src = '/js/YAML.js'></script>
+        <script src = '/js/Interface.js' defer></script>
+    </head>
+    <body>
+        <div class = 'mode'>
+            <div class = 'view' title = 'View' >
+                <img src = '/svg/View.svg' />
+            </div>
+            <div class = 'list' title = 'Search'>
+                <img src = '/svg/Search.svg' />
+            </div>
+        </div>
+        <div class = 'tabs' >
+            <div id = 'view' style = 'display:none' >
+                <div class = 'info'></div>
+                <div class = 'diagram'></div>
+            </div>
+            <div id = 'list' >
+                <div class = 'search'>
+                    <input type = 'text' placeholder = 'Search'>
+                </div>
+                <div class = 'boards'>
+                    <div id = 'Arduino_Uno' title = 'Arduino Uno'>
+                        <img src = '/svg/Arduino Uno.svg' />
+                        <div>Arduino<br>Uno</div>
+                    </div>
+                    <div id = 'Arduino_Nano' title = 'Arduino Nano'>
+                        <img src = '/svg/Arduino Nano.svg' />
+                        <div>Arduino<br>Nano</div>
+                    </div>
+                    <div id = 'Raspberry_Pi_Zero' title = 'Raspberry Pi Zero'>
+                        <img src = '/svg/Raspberry Pi Zero.svg' />
+                        <div>Raspberry Pi<br>Zero</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

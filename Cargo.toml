@@ -1,0 +1,14 @@
+[package]
+name = "Pinout"
+version = "1.0.0"
+edition = "2021"
+include = [ "/src" ]
+
+[profile.dev]
+opt-level = 0
+
+[profile.release]
+opt-level = 3
+
+[dependencies]
+web-view = { version = "0.7" }
