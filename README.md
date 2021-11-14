@@ -1,5 +1,7 @@
 # Pinout
-View pinouts locally.
+A small application to view pinouts locally.
+
+
 
 ![Preview](./public/Preview.png)
 
