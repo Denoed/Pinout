@@ -1,0 +1,2 @@
+# Pinout
+View pinouts locally.
