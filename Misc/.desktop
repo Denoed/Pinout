@@ -1,0 +1,11 @@
+
+[Desktop Entry]
+Type=Application
+Name=Pinout
+GenericName=Pinout Viewer
+Comment=Locally view pinouts of common circuit boards
+#Exec=konsole -e "bash -c 'cd ~/.local/share/Pinout/ && ./Pinout'"
+Exec=bash -c "cd /usr/local/Pinout && ./Pinout"
+Terminal=false
+Categories=Education;Development;Graphics;Utility;2DGraphics;Viewer;DataVisualization;Electronics;Documentation;
+Icon=/usr/local/Pinout/Icon.png

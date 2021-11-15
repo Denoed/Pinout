@@ -1,8 +1,10 @@
+#!/bin/sh
+
 clear
 
 deno run                                  \
     --allow-net                           \
     --allow-read=./                       \
-    --importmap=./src/server/Imports.json \
+    --importmap=./WebServer/Imports.json \
     --unstable                            \
-    src/server/Webserver.js
+    WebServer/Server.js

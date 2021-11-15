@@ -2,4 +2,6 @@ target/*
 stop*
 Cargo.lock
 Release.sh
-src/client/js/Yaml.js
+ReleaseDebug.sh
+Interface/js/Yaml.js
+Bundle/*

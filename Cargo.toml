@@ -1,8 +1,8 @@
 [package]
 name = "Pinout"
-version = "1.0.0"
+version = "1.0.1"
 edition = "2021"
-include = [ "/src" ]
+authors = [ "IHateYourCode <https://github.com/IHateYourCode>" ]
 
 [profile.dev]
 opt-level = 0
@@ -12,3 +12,7 @@ opt-level = 3
 
 [dependencies]
 web-view = { version = "0.7" }
+
+[[bin]]
+name = "Pinout"
+path = "src/main.rs"

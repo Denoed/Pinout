@@ -1,5 +1,9 @@
+#!/bin/sh
+
 clear
 
 cargo build
 
-./Run.sh
+cp target/debug/Pinout Pinout
+
+./Pinout

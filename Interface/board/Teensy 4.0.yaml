@@ -1,0 +1,170 @@
+pins:
+
+    #
+    #   Starts at top right
+    #
+
+    pin-1:
+        VIN: 3.6 - 5.5
+
+    pin-2:
+        Type: GND
+
+    pin-3:
+        Supply: 3.3
+
+    pin-4:
+        Digital: 23
+        Analog: 9
+        CAN: Receive 1
+        Type: PWM
+        DigitalAudio: MClock 1
+
+    pin-5:
+        Digital: 22
+        Analog: 8
+        CAN: Transmit 1
+        Type: PWM
+
+    pin-6:
+        Digital: 21
+        Analog: 7
+        Serial: Receive 5
+        DigitalAudio: BClock 1
+
+    pin-7:
+        Digital: 20
+        Analog: 6
+        Serial: Transmit 5
+        DigitalAudio: LRClock 1
+
+    pin-8:
+        Digital: 19
+        Analog: 5
+        I2C: Clock 0
+        Type: PWM
+
+    pin-9:
+        Digital: 18
+        Analog: 4
+        I2C: Data 0
+        Type: PWM
+
+    pin-10:
+        Digital: 17
+        Analog: 3
+        Serial: Transmit 4
+        I2C: Data 1
+
+    pin-11:
+        Digital: 16
+        Analog: 2
+        Serial: Receive 4
+        I2C: Clock 1
+
+    pin-12:
+        Digital: 15
+        Analog: 1
+        DigitalAudio: S/P DIF In
+        Type: PWM
+
+    pin-13:
+        Digital: 14
+        Analog: 0
+        DigitalAudio: S/P DIF Out
+        Type: PWM
+
+    pin-14:
+        Digital: 13
+        SPI: Clock
+        CAN: Receive 1
+
+    pin-15:
+        Type: Enable
+
+    pin-16:
+        Type: Program
+
+    pin-17:
+        Type: GND
+
+    pin-18:
+        Supply: 3.3
+
+    pin-19:
+        Reference: Battery
+
+    pin-20:
+        Digital: 12
+        SPI: MISO
+        DigitalAudio: MQSL
+        Type: PWM
+
+    pin-21:
+        Digital: 11
+        SPI: MOSI
+        CAN: Transmit 1
+        Type: PWM
+
+    pin-22:
+        Digital: 10
+        SPI: CS
+        DigitalAudio: MQSR
+        Type: PWM
+
+    pin-23:
+        Digital: 9
+        DigitalAudio: Out 1 C
+        Type: PWM
+
+    pin-24:
+        Digital: 8
+        Serial: Transmit 2
+        DigitalAudio: In 1
+        Type: PWM
+
+    pin-25:
+        Digital: 7
+        Serial: Receive 2
+        DigitalAudio: Out 1 A
+        Type: PWM
+
+    pin-26:
+        Digital: 6
+        DigitalAudio: Out 1 D
+        Type: PWM
+
+    pin-27:
+        Digital: 5
+        DigitalAudio: In 2
+        Type: PWM
+
+    pin-28:
+        Digital: 4
+        DigitalAudio: BClock 2
+        Type: PWM
+
+    pin-29:
+        Digital: 3
+        DigitalAudio: LRClock 2
+        Type: PWM
+
+    pin-30:
+        Digital: 2
+        DigitalAudio: Out 2
+        Type: PWM
+
+    pin-31:
+        Digital: 1
+        Serial: Transmit 1
+        CAN: Transmit 2
+        Type: PWM
+
+    pin-32:
+        Digital: 0
+        Serial: Receive 1
+        CAN: Transmit 2
+        Type: PWM
+
+    pin-33:
+        Type: GND

@@ -1,0 +1,158 @@
+pins:
+
+    #
+    #   Right Pin Column
+    #
+
+    pin-right-1:
+        Supply: 3.3
+
+    pin-right-2:
+        GPIO: 2
+        I2C: Data
+
+    pin-right-3:
+        GPIO: 3
+        I2C: Clock
+
+    pin-right-4:
+        GPIO: 4
+
+    pin-right-5:
+        Type: GND
+
+    pin-right-6:
+        GPIO: 17
+
+    pin-right-7:
+        GPIO: 27
+
+    pin-right-8:
+        GPIO: 22
+
+    pin-right-9:
+        Supply: 3.3
+
+    pin-right-10:
+        Type: MOSI
+        GPIO: 10
+
+    pin-right-11:
+        Type: MISO
+        GPIO: 9
+
+    pin-right-12:
+        Type: SCLK
+        GPIO: 11
+
+    pin-right-13:
+        Type: GND
+
+    pin-right-14:
+        I2C: ID EEPROM SD
+
+    pin-right-15:
+        GPIO: 5
+
+    pin-right-16:
+        GPIO: 6
+
+    pin-right-17:
+        GPIO: 13
+
+    pin-right-18:
+        GPIO: 19
+
+    pin-right-19:
+        GPIO: 26
+
+    pin-right-20:
+        Type: Reset
+
+    pin-right-21:
+        Type: RCA Video Output
+
+
+    #
+    #   Left Pin Column
+    #
+
+    pin-left-1:
+        Supply: 5
+
+    pin-left-2:
+        Supply: 5
+
+    pin-left-3:
+        Type: GND
+
+    pin-left-4:
+        UART: TX
+        GPIO: 14
+
+    pin-left-5:
+        UART: RX
+        GPIO: 15
+
+    pin-left-6:
+        Type: PWM
+        ChipEnable: 0 SP1
+        GPIO: 18
+
+    pin-left-7:
+        Type: GND
+
+    pin-left-8:
+        GPIO: 23
+
+    pin-left-9:
+        GPIO: 24
+
+    pin-left-10:
+        Type: GND
+
+    pin-left-11:
+        GPIO: 25
+
+    pin-left-12:
+        GPIO: 8
+        ChipEnable: 0 SPI0
+
+    pin-left-13:
+        GPIO: 7
+        ChipEnable: 1 SPI0
+
+    pin-left-14:
+        GPIO: 1
+        I2C: EEPROM Serial Clock
+
+    pin-left-15:
+        Type: GND
+
+    pin-left-16:
+        Type: PWM
+        GPIO: 12
+
+    pin-left-17:
+        Type: GND
+
+    pin-left-18:
+        GPIO: 16
+        ChipEnable: 2 SPI1
+
+    pin-left-19:
+        GPIO: 20
+        Type: MISO
+
+    pin-left-20:
+        GPIO: 21
+        Type: SCLK
+
+    pin-left-21:
+        Type: GND
+
+    pin-left-22:
+        Type: Reset
+
+    pin-left-23:
+        Type: RCA Video Output

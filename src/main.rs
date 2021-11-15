@@ -4,6 +4,7 @@
 use std::process::Command;
 use web_view::*;
 
+use std::env;
 use std::thread;
 use std::time::Duration;
 
@@ -21,7 +22,27 @@ fn invoke_handler(wv: &mut WebView<()>, arg: &str) -> WVResult {
     Ok(())
 }
 
+
 fn main() {
+
+    let mut webserver : String = "".to_owned();
+
+    match env::current_exe() {
+        Ok(mut path) => {
+
+            path.pop();
+
+            match path.to_str() {
+                Some(dir) => {
+                    println!("Webserver Directory: {}",dir);
+                    webserver = dir.to_owned();
+                },
+                None => println!("Source path not found")
+            }
+        },
+        Err (e) => println!("Source path not found: {}",e)
+    }
+
 
     println!("Stopping Existing Process");
 
@@ -37,7 +58,10 @@ fn main() {
 
     println!("Starting New Process");
 
-    thread::spawn(||{ startWebserver(); });
+
+    thread::spawn(move ||{
+        startWebserver(webserver);
+    });
 
 
     println!("STARTING WEBVIEW");
@@ -71,20 +95,30 @@ fn main() {
     stopWebserver(||{});
 }
 
-fn startWebserver(){
+fn startWebserver(dir : String){
 
-    let mut command = Command::new("deno");
-    command.arg("run");
-    command.arg("--allow-net");
-    command.arg("--allow-read=./");
-    command.arg("--importmap=./src/server/Imports.json");
-    command.arg("--unstable");
-    command.arg("./src/server/Webserver.js");
+    let server = [ dir.trim() , "/Webserver/Server.js" ].join("");
+    let imports = [ "--importmap=" , dir.trim() , "/Webserver/Imports.json" ].join("");
+
+    println!("server: {}",server);
+    println!("imports: {}",imports);
+
+    let mut command = Command::new("sh");
+
+    command
+            .arg("-c")
+            .arg([
+                "~/.deno/bin/deno run --allow-net --allow-read=" , dir.trim() , " " ,
+                &imports , " --unstable " , &server
+            ].join(""))
+            .output()
+            .expect("failed to execute process");
 
     match command.spawn(){
         Ok(process) => println!("Webserver process: {}",process.id()),
         Err(exception) => {
             println!("Couldn't start webserver!\n{}",exception);
+            thread::sleep(Duration::from_millis(20000));
             std::process::exit(1);
         }
     }
