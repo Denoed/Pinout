@@ -209,8 +209,8 @@ var YAML =
             return parseFloat(m[0]);
         } else if(m = val.match(regex["integer"])) {
             return parseInt(m[0]);
-        } else if( !isNaN(m = Date.parse(val))) {
-            return new Date(m);
+        // } else if( !isNaN(m = Date.parse(val))) {
+            // return new Date(m);
         } else if(m = val.match(regex["single_key_value"])) {
             var res = {};
             res[m[1]] = processValue(m[2]);

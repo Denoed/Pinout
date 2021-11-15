@@ -52,9 +52,12 @@
             info.children[0]?.remove();
 
         function tag(value,color){
+            const content = document.createElement('div');
+            content.innerText = value;
+
             const element = document.createElement('div');
-            element.innerHTML = `<div>${ value }</div>`;
             element.style.backgroundColor = color;
+            element.appendChild(content);
             info.appendChild(element);
         }
 
@@ -67,6 +70,12 @@
         if(pin.UART)
             tag(`UART ${ pin.UART }`,'#00bcd4');
 
+        if(pin.Serial)
+            tag(`Serial ${ pin.Serial }`,'#00bcd4');
+
+        if(pin.SPI)
+            tag(`SPI ${ pin.SPI }`,'#862162');
+
         if(pin.Type.includes('PWM'))
             tag('PWM','#464646');
 
@@ -75,6 +84,12 @@
 
         if(pin.Type.includes('VIN'))
             tag('VIN','#fb2d2d');
+
+        if(pin.Type.includes('Enable'))
+            tag('Enable','green');
+
+        if(pin.Type.includes('Program'))
+            tag('Program','gray');
 
         if(pin.VIN)
             tag(`VIN ${ pin.VIN }`,'#ffd54f');
@@ -108,6 +123,12 @@
 
         if(pin.Reference)
             tag(`${ pin.Reference } Reference`,'green');
+
+        if(pin.DigitalAudio)
+            tag(`Digital Audio ${ pin.DigitalAudio }`,'#04ad7e');
+
+        if(pin.CAN)
+            tag(`CAN ${ pin.CAN }`,'#f94c6a');
     }
 
 
@@ -129,7 +150,7 @@
 
     Boards.forEach((board) => {
 
-        const id = board.name.replaceAll(' ','_');
+        const id = board.name.replaceAll(/[ .]/g,'_');
 
         const element = byId(id);
 

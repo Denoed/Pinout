@@ -81,13 +81,14 @@ body {
 }
 
 #view > .info {
-    width: 100%;
-    height: 80px;
+    width: calc(100% - 32px);
     border-bottom: 3px solid #0000002e;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 12px;
+    flex-wrap: wrap;
+    padding: 16px;
 }
 
 #view > .info > div {

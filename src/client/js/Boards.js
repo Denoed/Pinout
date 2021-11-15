@@ -30,6 +30,14 @@ Boards = [{
         'Zero'
     ]
 
+},{
+
+    name : 'Teensy 4.0',
+    tags: [
+        'Teensy',
+        '4.0'
+    ]
+
 }];
 
 Boards.forEach((board) => {
