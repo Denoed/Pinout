@@ -9,19 +9,6 @@ use std::thread;
 use std::time::Duration;
 
 
-fn invoke_handler(wv: &mut WebView<()>, arg: &str) -> WVResult {
-
-    println!("INVOKE: {}",arg);
-
-    if arg.starts_with("Change Title|") {
-        println!("Changing title to: {}",&arg[13..]);
-
-        wv.set_title(&arg[13..]).unwrap();
-    }
-
-    Ok(())
-}
-
 
 fn main() {
 
@@ -80,7 +67,7 @@ fn main() {
             .size(600,500)
             .debug(true)
             .user_data(())
-            .invoke_handler(invoke_handler)
+            .invoke_handler(handleBrowserEvents)
             .build()
             .unwrap();
 
@@ -124,9 +111,17 @@ fn startWebserver(dir : String){
     }
 }
 
+
+/**
+ *  Stop Webserver Process
+ *  by sending a closing
+ *  signal via pathname.
+ */
+
 fn stopWebserver<F:Fn()>(onError : F){
 
     let mut command = Command::new("wget");
+
     command.arg("http://localhost:7805/stop");
 
     match command.spawn(){
@@ -136,4 +131,19 @@ fn stopWebserver<F:Fn()>(onError : F){
             onError();
         }
     }
+}
+
+
+/**
+ *  Events
+ *  Browser -> Application
+ */
+
+fn handleBrowserEvents(wv : & mut WebView<()>,arg : & str) -> WVResult {
+
+    if arg.starts_with("Change Title|"){
+        return wv.set_title(&arg[13..]);
+    }
+
+    Ok(())
 }
