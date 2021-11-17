@@ -9,6 +9,6 @@ clear
 deno run                                  \
     --allow-net                           \
     --allow-read=./                       \
-    --importmap=./WebServer/Imports.json  \
+    --importmap=./Webserver/Imports.json  \
     --unstable                            \
-    ./WebServer/Server.js
+    ./Webserver/Server.js
