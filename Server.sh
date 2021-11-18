@@ -1,5 +1,6 @@
 #!/bin/sh
 
+./Clean.sh
 clear
 
 #   Local execution relies on

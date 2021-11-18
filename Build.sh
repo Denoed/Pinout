@@ -1,5 +1,6 @@
 #!/bin/sh
 
+./Clean.sh
 clear
 
 #   Build (Debug Mode)
