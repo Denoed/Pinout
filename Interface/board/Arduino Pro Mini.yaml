@@ -1,0 +1,315 @@
+specs:
+
+    ATmega328:
+
+        PowerSupply:
+            From: 3.35
+            To: 12
+
+        OperatingVoltage: 3.3
+        PinCurrent: 40
+
+        Interrupts: 2
+        Digital: 14
+        Analog: 6
+        PWM: 6
+        UART: 1
+        SPI: 1
+        I2C: 1
+
+        EEPROM: 1
+        Flash: 32
+        Bootloader: 2
+        SRAM: 2
+        Clock: 8
+
+    ATmega168:
+
+        PowerSupply:
+            From: 5
+            To: 12
+
+        OperatingVoltage: 5
+        PinCurrent: 40
+
+        Interrupts: 2
+        Digital: 14
+        Analog: 6
+        PWM: 6
+        UART: 1
+        SPI: 1
+        I2C: 1
+
+        EEPROM: 0.5
+        Flash: 16
+        Bootloader: 2
+        SRAM: 1
+        Clock: 8
+
+pins:
+
+    #
+    #   Analog Pins
+    #
+
+    pin-A0:
+        Pin: 23
+        Analog: 0
+        Digital: 14
+        PCINT: 8
+        Port: C
+        Bit: 0
+
+    pin-A1:
+        Pin: 24
+        Analog: 1
+        Digital: 15
+        PCINT: 9
+        Port: C
+        Bit: 1
+
+    pin-A2:
+        Pin: 25
+        Analog: 2
+        Digital: 16
+        PCINT: 10
+        Port: C
+        Bit: 2
+
+    pin-A3:
+        Pin: 25
+        Analog: 3
+        Digita: 17
+        PCINT: 11
+        Port: C
+        Bit: 3
+
+    pin-A4:
+        Pin: 27
+        Analog: 4
+        Digital: 18
+        PCINT: 12
+        Serial: Data
+        Port: C
+        Bit: 4
+
+
+    pin-A5:
+        Pin: 28
+        Analog: 5
+        Digital: 19
+        PCINT: 13
+        Serial: Clock
+        Port: C
+        Bit: 5
+
+    pin-A6:
+        Pin: 19
+        Analog: 6
+        Port: C
+        Bit: 6
+
+    pin-A7:
+        Pin: 22
+        Analog: 7
+        Port: C
+        Bit: 7
+
+
+    #
+    #   Numbered Pins
+    #
+
+    pin-2:
+        Pin: 32
+        Digital: 2
+        PCINT: 18
+        Interrupt: 0
+        Port: D
+        Bit: 2
+
+    pin-3:
+        Pin: 1
+        Type:
+            - OC2B
+            - PWM
+        Digital: 3
+        PCINT: 19
+        Interrupt: 1
+        Port: D
+        Bit: 3
+
+    pin-4:
+        Pin: 2
+        Type:
+            - XCK
+            - T 0
+        Digital: 4
+        PCINT: 20
+        Port: D
+        Bit: 4
+
+    pin-5:
+        Pin: 9
+        Type:
+            - OC0B
+            - T 1
+            - PWM
+        PCINT: 21
+        Digital: 5
+        Port: D
+        Bit: 5
+
+    pin-6:
+        Pin: 10
+        Type:
+            - OC0A
+            - AIN0
+            - PWM
+        PCINT: 22
+        Digital: 6
+        Port: D
+        Bit: 6
+
+    pin-7:
+        Pin: 11
+        Type: AIN1
+        PCINT: 23
+        Digital: 7
+        Port: D
+        Bit: 7
+
+    pin-8:
+        Pin: 12
+        Type:
+            - ICP1
+            - CLKO
+        PCINT: 0
+        Digital: 8
+        Port: B
+        Bit: 0
+
+    pin-9:
+        Pin: 13
+        Type:
+            - OC1A
+            - PWM
+        PCINT: 1
+        Digital: 9
+        Port: B
+        Bit: 1
+
+    pin-10:
+        Pin: 14
+        Type:
+            - OC1B
+            - PWM
+        PCINT: 2
+        Serial: SS
+        Digital: 10
+        Port: B
+        Bit: 2
+
+    pin-11:
+        Pin: 15
+        Type:
+            - OC2
+            - PWM
+        Serial: MOSI
+        Digital: 11
+        Port: B
+        Bit: 3
+
+    pin-12:
+        Pin: 16
+        PCINT: 4
+        Serial: MISO
+        Digital: 12
+        Port: B
+        Bit: 4
+
+    pin-13:
+        pin: 17
+        PCINT: 5
+        Serial: Clock
+        Digital: 13
+        Port: B
+        Bit: 5
+
+
+    #
+    #   Other
+    #
+
+    pin-GND-1:
+        Type: GND
+
+    pin-GND-2:
+        Type: GND
+
+    pin-GND-3:
+        Type: GND
+
+    pin-GND-4:
+        Type: GND
+
+    pin-VCC-1:
+        Supply: Type Specific
+
+    pin-VCC-2:
+        Supply: Type Specific
+
+    pin-VCC-3:
+        Supply: Type Specific
+
+    pin-RAW:
+        Raw: 7 - 9
+
+    pin-RST-1:
+        Pin: 29
+        Type: Reset
+        PCINT: 14
+        Port: C
+        Bit: 6
+
+    pin-RST-2:
+        Pin: 29
+        Type: Reset
+        PCINT: 14
+        Port: C
+        Bit: 6
+
+    pin-RST-3:
+        Pin: 29
+        Type: Reset
+        PCINT: 14
+        Port: C
+        Bit: 6
+
+    pin-RX-1:
+        Pin: 30
+        Serial: Receive
+        PCINT: 16
+        Port: D
+        Bit: 0
+
+    pin-RX-2:
+        Pin: 30
+        Serial: Receive
+        PCINT: 16
+        Port: D
+        Bit: 0
+
+    pin-TX-1:
+        Pin: 31
+        Serial: Transmit
+        PCINT: 17
+        Port: D
+        Bit: 1
+
+    pin-TX-2:
+        Pin: 31
+        Serial: Transmit
+        PCINT: 17
+        Port: D
+        Bit: 1

@@ -7,7 +7,18 @@ Boards = [{
         'Uno',
         'Microcontroller',
         'Atmel',
-        'Mega328P'
+        'ATmega328'
+    ]
+
+},{
+
+    name : 'Arduino Pro Mini',
+    tags: [
+        'Arduino',
+        'Mini',
+        'Microcontroller',
+        'Atmel',
+        'ATmega328'
     ]
 
 },{
@@ -18,7 +29,7 @@ Boards = [{
         'Nano',
         'Microcontroller',
         'Atmel',
-        'Mega328P'
+        'ATmega328'
     ]
 
 },{

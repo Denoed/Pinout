@@ -192,6 +192,11 @@ body {
     height: calc(45mm * .8);
 }
 
+#Arduino_Pro_Mini > img {
+    width: calc(18mm * .8);
+    height: calc(33mm * .8);
+}
+
 #Raspberry_Pi_Zero > img {
     width: calc(32mm * .8);
     height: calc(68mm * .8);

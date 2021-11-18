@@ -129,6 +129,21 @@
 
         if(pin.CAN)
             tag(`CAN ${ pin.CAN }`,'#f94c6a');
+
+        if(pin.Pin)
+            tag(`Physical ${ pin.Pin }`,'gray');
+
+        if(pin.Port)
+            tag(`Port ${ pin.Port }`,'gray');
+
+        if(pin.Bit)
+            tag(`Bit ${ pin.Bit }`,'gray');
+
+        if(pin.PCINT)
+            tag(`PCINT ${ pin.PCINT }`,'gray');
+
+        if(pin.Interrupt)
+            tag(`Interrupt ${ pin.Interrupt }`,'gray');
     }
 
 

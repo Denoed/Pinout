@@ -64,7 +64,7 @@ fn main() {
         let web = web_view::builder()
             .title("Pinout")
             .content(Content::Url("http://localhost:7805/"))
-            .size(600,500)
+            .size(800,600)
             .debug(true)
             .user_data(())
             .invoke_handler(handleBrowserEvents)
