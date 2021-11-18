@@ -12,5 +12,6 @@ A small application to view pinouts locally.
 ### Devices
 - Arduino Uno
 - Arduino Nano
+- Arduino Pro Mini
 - Raspberry Pi Zero
 - Teensy 4.0
